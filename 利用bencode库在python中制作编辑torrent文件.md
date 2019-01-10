@@ -1,9 +1,14 @@
 https://github.com/utdemir/bencoder  
 https://github.com/rndusr/torf  
 https://torf.readthedocs.io/index.html  
-以bencoder为例进行演示  
+bencoder为例进行演示  
+
+先进行安装
 `pip3 install bencoder`
+然后
 ```
+
+python
 import bencoder
 f = open("2.torrent","rb") #读入文件
 d = bencoder.decode(f.read()) #赋值
