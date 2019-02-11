@@ -543,51 +543,54 @@ torf -h
   
 ## 使用说明：  
  
-> torf - CLI tool to create, read and edit torrent files
-> 
-> USAGE
->     torf PATH [OPTIONS] [-o TORRENT]
->     torf -i TORRENT
->     torf -i TORRENT [OPTIONS] -o NEW TORRENT
-> 
-> ARGUMENTS
->     PATH                   Path to torrent's content
->     --exclude, -e EXCLUDE  File matching pattern that is used to exclude
->                            files in PATH
->     --in, -i TORRENT       Read metainfo from TORRENT
->     --out, -o TORRENT      Write metainfo to TORRENT (default: NAME.torrent)
->     --name, -n NAME        Torrent name (default: basename of PATH)
->     --tracker, -t TRACKER  Announce URL
->     --webseed, -w WEBSEED  Webseed URL
->     --private, -p          Forbid clients to use DHT and PEX
->     --comment, -c COMMENT  Comment that is stored in TORRENT
->     --date, -d DATE        Creation date as YYYY-MM-DD[ HH:MM[:SS]], 'now'
->                            or 'today' (default: 'now')
->     --source, -s SOURCE    Add "source" field
->     --xseed, -x            Randomize info hash
-> 
->     --notracker, -T        Remove trackers from TORRENT
->     --nowebseed, -W        Remove webseeds from TORRENT
->     --noprivate, -P        Remove private flag from TORRENT
->     --nocomment, -C        Remove comment from TORRENT
->     --nodate, -D           Remove date from TORRENT
->     --nosource, -S         Remove "source" field from TORRENT
->     --noxseed, -X          De-randomize info hash of TORRENT
->     --nocreator, -R        Remove creator from TORRENT
->     --notorrent, -N        Don't create torrent file
->     --nomagnet, -M         Don't create magnet link
-> 
->     --yes, -y              Answer all yes/no prompts with "yes"
->     --config, -f FILE      Read configuration from FILE
->                            (default: ~/.config/torf/config
->     --noconfig, -F         Ignore configuration file
->     --profile, -z PROFILE  Use options from PROFILE
-> 
->     --human, -u            Force human-readable output
->     --nohuman, -U          Force machine-readable output
->     --help, -h             Show this help screen and exit
->     --version, -V          Show version number and exit
->   
+
+```
+torf - CLI tool to create, read and edit torrent files
+
+USAGE
+    torf PATH [OPTIONS] [-o TORRENT]
+    torf -i TORRENT
+    torf -i TORRENT [OPTIONS] -o NEW TORRENT
+
+ARGUMENTS
+    PATH                   Path to torrent's content
+    --exclude, -e EXCLUDE  File matching pattern that is used to exclude
+                           files in PATH
+    --in, -i TORRENT       Read metainfo from TORRENT
+    --out, -o TORRENT      Write metainfo to TORRENT (default: NAME.torrent)
+    --name, -n NAME        Torrent name (default: basename of PATH)
+    --tracker, -t TRACKER  Announce URL
+    --webseed, -w WEBSEED  Webseed URL
+    --private, -p          Forbid clients to use DHT and PEX
+    --comment, -c COMMENT  Comment that is stored in TORRENT
+    --date, -d DATE        Creation date as YYYY-MM-DD[ HH:MM[:SS]], 'now'
+                           or 'today' (default: 'now')
+    --source, -s SOURCE    Add "source" field
+    --xseed, -x            Randomize info hash
+
+    --notracker, -T        Remove trackers from TORRENT
+    --nowebseed, -W        Remove webseeds from TORRENT
+    --noprivate, -P        Remove private flag from TORRENT
+    --nocomment, -C        Remove comment from TORRENT
+    --nodate, -D           Remove date from TORRENT
+    --nosource, -S         Remove "source" field from TORRENT
+    --noxseed, -X          De-randomize info hash of TORRENT
+    --nocreator, -R        Remove creator from TORRENT
+    --notorrent, -N        Don't create torrent file
+    --nomagnet, -M         Don't create magnet link
+
+    --yes, -y              Answer all yes/no prompts with "yes"
+    --config, -f FILE      Read configuration from FILE
+                           (default: ~/.config/torf/config
+    --noconfig, -F         Ignore configuration file
+    --profile, -z PROFILE  Use options from PROFILE
+
+    --human, -u            Force human-readable output
+    --nohuman, -U          Force machine-readable output
+    --help, -h             Show this help screen and exit
+    --version, -V          Show version number and exit
+```
+
 
 * * *
 
