@@ -542,108 +542,52 @@ torf -h
 
   
 ## 使用说明：  
-> NAME  
-> torf - command line tool to create, display and edit torrents  
+ 
+> torf - CLI tool to create, read and edit torrent files
+> 
+> USAGE
+>     torf PATH [OPTIONS] [-o TORRENT]
+>     torf -i TORRENT
+>     torf -i TORRENT [OPTIONS] -o NEW TORRENT
+> 
+> ARGUMENTS
+>     PATH                   Path to torrent's content
+>     --exclude, -e EXCLUDE  File matching pattern that is used to exclude
+>                            files in PATH
+>     --in, -i TORRENT       Read metainfo from TORRENT
+>     --out, -o TORRENT      Write metainfo to TORRENT (default: NAME.torrent)
+>     --name, -n NAME        Torrent name (default: basename of PATH)
+>     --tracker, -t TRACKER  Announce URL
+>     --webseed, -w WEBSEED  Webseed URL
+>     --private, -p          Forbid clients to use DHT and PEX
+>     --comment, -c COMMENT  Comment that is stored in TORRENT
+>     --date, -d DATE        Creation date as YYYY-MM-DD[ HH:MM[:SS]], 'now'
+>                            or 'today' (default: 'now')
+>     --source, -s SOURCE    Add "source" field
+>     --xseed, -x            Randomize info hash
+> 
+>     --notracker, -T        Remove trackers from TORRENT
+>     --nowebseed, -W        Remove webseeds from TORRENT
+>     --noprivate, -P        Remove private flag from TORRENT
+>     --nocomment, -C        Remove comment from TORRENT
+>     --nodate, -D           Remove date from TORRENT
+>     --nosource, -S         Remove "source" field from TORRENT
+>     --noxseed, -X          De-randomize info hash of TORRENT
+>     --nocreator, -R        Remove creator from TORRENT
+>     --notorrent, -N        Don't create torrent file
+>     --nomagnet, -M         Don't create magnet link
+> 
+>     --yes, -y              Answer all yes/no prompts with "yes"
+>     --config, -f FILE      Read configuration from FILE
+>                            (default: ~/.config/torf/config
+>     --noconfig, -F         Ignore configuration file
+>     --profile, -z PROFILE  Use options from PROFILE
+> 
+>     --human, -u            Force human-readable output
+>     --nohuman, -U          Force machine-readable output
+>     --help, -h             Show this help screen and exit
+>     --version, -V          Show version number and exit
 >   
-> SYNOPSIS  
-> torf PATH \[OPTIONS\] \[-o TORRENT\]  
-> torf -i TORRENT  
-> torf -i TORRENT \[OPTIONS\] -o TORRENT  
->   
-> DESCRIPTION  
-> torf can create new torrents, display information about existing torrents, and edit torrents (e.g. to remove a comment or change the tracker) without re-hashing the content.  
->   
-> OPTIONS  
-> Options that start with --no take precedence.  
->   
-> PATH  
-> The path to the torrent’s content.  
->   
-> --exclude, -e EXCLUDE  
-> Exclude files from PATH that match the pattern EXCLUDE. This option may be given multiple times. It is ignored if PATH is not a directory. See EXCLUDING FILES.  
->   
-> --in, -i TORRENT  
-> Read metainfo from TORRENT.  
->   
-> --out, -o TORRENT  
-> Write torrent to TORRENT.  
-> Default: NAME.torrent  
->   
-> --notorrent, -N  
-> Do not create a torrent file.  
->   
-> --nomagnet, -M  
-> Do not create a magnet link.  
->   
-> --name, -n NAME  
-> Destination file or directory when the torrent is downloaded.  
-> Default: Basename of PATH  
->   
-> --tracker, -t URL  
-> The announce URL of a tracker. This option may be given multiple times.  
->   
-> --notracker, -T  
-> Remove trackers from an existing torrent.  
->   
-> --webseed, -w URL  
-> A webseed URL (BEP19). This option may be given multiple times.  
->   
-> --nowebseed, -W  
-> Remove webseeds from an existing torrent.  
->   
-> --private, -p  
-> Tell clients to use tracker(s) exclusively for peer discovery.  
->   
-> --noprivate, -P  
-> Allow clients to use DHT and PEX for peer discovery.  
->   
-> --comment, -c COMMENT  
-> A comment that is stored in the torrent file.  
->   
-> --nocomment, -C  
-> Remove the comment from an existing torrent.  
->   
-> --date, -d DATE  
-> The creation date in the format YYYY-MM-DD\[ HH:MM\[:SS\]\], now for the current time or today for the current time at midnight.  
-> Default: today  
->   
-> --nodate, -D  
-> Remove the creation date from an existing torrent.  
->   
-> --xseed, -x  
-> Randomize the info hash to help with cross-seeding. This simply adds an entropy field to the info section of the metainfo and sets it to a random integer.  
->   
-> --noxseed, -X  
-> De-randomize a previously randomized info hash of an existing torrent. This removes the entropy field from the info section of the metainfo.  
->   
-> --nocreator, -R  
-> Remove the name of the application that created the torrent from an existing torrent.  
->   
-> --yes, -y  
-> Answer all yes/no prompts with “yes”. At the moment, all this does is overwrite TORRENT without asking.  
->   
-> --config, -f FILE  
-> Read command line arguments from configuration FILE. See CONFIGURATION FILE.  
-> Default: $XDG\_CONFIG\_HOME/torf/config where $XDG\_CONFIG\_HOME defaults to ~/.config  
->   
-> --noconfig, -F  
-> Do not use any configuration file.  
->   
-> --profile, -z PROFILE  
-> Use predefined arguments specified in PROFILE. This option may be given multiple times. See CONFIGURATION FILE.  
->   
-> --human, -u  
-> Display information in human-readable output even if stdout is not a TTY. See PIPING OUTPUT.  
->   
-> --nohuman, -U  
-> Display information in machine-readable output even if stdout is a TTY. See PIPING OUTPUT.  
->   
-> --help, -h  
-> Display a short help text and exit.  
->   
-> --version, -V  
-> Display the version number and exit.  
-  
 
 * * *
 
@@ -665,8 +609,10 @@ torf -i foo.torrent -c 'New comment' -D -o bar.torrent
 ```  
 torf -i foo.torrent | grep '^Files' | cut -f2-  
 ```  
-  
-
+5.修改种子的source字段为"PTP"，并另存为bar2.torrent
+```
+torf -i foo.torrent -s PTP -o bar2.torrent
+```
 * * *
 
   
