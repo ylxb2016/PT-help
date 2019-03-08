@@ -1,0 +1,268 @@
+感谢大佬们的帮助和支持。  
+作为回馈，也将自己一段时间的了解的0day PT相关的写下来，分享给大家，希望对大家有用。    
+理解或者说的不对的地方，还请大家见谅      
+(⊙o⊙)…请忽视渣渣排版      
+
+
+1. [0day的概念](#1)  
+1. [受众人群及作用](#2)  
+1. [获取渠道及方式](#3)  
+1. [部分0day PT站点简介](#4)  
+1. [如何查询或者读懂0day trace](#5)  
+1. [结束语](#6)  
+
+---
+
+
+<h1 id="1">一. 0day 的概念</h1>
+
+## 1.0day
+广义上的0day包含两种概念：
+0day攻击，一种对计算机软件的攻击方式
+0day资源，一种Warez
+在本帖的语境下，0day多指后者，0day中的0表示zero，其更准确的称呼是Zero-day warez（copyrighted software that is cracked on the same day it is released）
+0day最初定义是在官方发行软件或游戏后24小时内出现的破解版本，一些技术小组对这些软件或游戏以一定的格式进行打包发布，通过匿名的FTP渠道最终共享全球，是一种Warz。现在只要是在软件或者其他资源发布后，于最短时间内出现的相关破解，都归入0day的范畴。0day因此也经常被视为破解的同义词。
+
+Warez则是指在电脑领域非法交换的软件（盗版拷贝）。这个词最初源自于英语单词Software，然后在Leet语（黑客语）里将单词的复数“S”换成“Z”。还有一种说法则认为, Z表示Zero Day的Z。随着互联网的发展，如今已发展为指代涵盖游戏，音乐，影视等各种数据资源。
+在一般情况下，指称0day资源的0day和WareZ基本上可视为同义词。  
+## **2.trace**
+trace (追踪)、race（竞赛）也就是比谁从topsite的pre（预告）后最快下载到自己的站点，然后发种出来，这一步实现了rls（资源）从scene流落到p2p的世界。
+
+## **3.pre pretime**
+pre 是指某grp成员将制作好的资源上传到topsite后（首先上传到小组内部目录），把资源转移到topsite上所有用户有下载权限的目录里，同时脚本 会自动在该TS的IRC上发布该rlz的相关信息。此过程称“preing”而这段时间则称为pretime，此后这一个rlz状态变成pre‘d（前提 是不出BUG，有问题则会被nuked。其他小组如果继续发布相同的资源则会被dupe，除非某其他的grp制作出更好rlz，此时这个更好的rlz会标 注tag proper
+
+另外pretime也可以理解为从release被上传到TS后到资源被制作成种子并发布这段时间。一些0day方向的PT站会在资源中注明pretime，以强调自身转发的速度，对于普通用户而言，pretime并没有太多实际意义。
+
+---
+<h1 id="2">二. 受众人群及作用</h1>  
+早年时候，很多软件，也就是WareZ比较多，很多人为了第一时间下载到，也会玩0day ftp，但是近些年这点没落了，软件方面的小组基本见不到了，越来越少，有点技术的组都跑去0day游戏那边去了。
+
+目前我所了解到的有以下几类人会可能比常人多接触0day资源：  
+
+1. 游戏爱好者  
+      现在绝大多数游戏的破解基本上全靠scene组来第一时间破解，尤其是一些游戏大作，经常是这几个组来破解CPY，CODEX,SKIDROW,STEAMPUNKS,RELOADED,PLAZA.而为了第一时间玩到这些游戏，有一些玩家就会去多接触0day资源。
+
+1. PT发种升级  
+      好多玩PT的，尤其是玩国外站点的比如PTP,MTV,BTN,HDB等等，为了发种升级，会选择发0day资源。因为0day资源一般来说是比p2p资源快很多，对于不是自购大佬去分流的，玩0day PT可以最快的得到资源去发种，去升级账户，升级进官窑区了，刷数据之类的会用得着。
+
+1. 收割机、刷数据  
+     收割机、刷数据自然会有人去注册各个站点，去参观酱油，或者用seedbox硬刚刷数据的，这个也有不少人。
+1. scene资源收藏者  
+     最后就是scene收藏者了，因为scene界有一套相对严格的业界标准，如果制作出来的游戏、软件有病毒或者残次品，就可能会被嘲笑，被踢出圈子。所以某种意义上scene组的一些资源也是质量的代表。所以会有爱好者收集这个。
+
+
+---
+<h1 id="3">三. 获取渠道及方式</h1>
+
+## **1.topsite**
+
+这是最快的方式，scene资源都是首发到这些topsite的ftp上，这些ftp都是大带宽，10G+带宽量级那种的，然后再从这里分流到其他usenet，PT，公网等等；
+不过这个门槛较高，没有一定的技术或者人脉是接触不到这个渠道的。或者可以尝试去这里`https://predb.pw/ftp.php`付费使用，价格未知.  
+## **2.usenet**
+ 
+这个也是相对比较快的方式，但是包含bin二进制文件的usenet（新闻组）基本都是收费的，一般人尤其国人不一定会花钱去玩这个。0day资源更新速度比公网快，比参加race的0day PT还是要慢上好几天的。
+如果大家有兴趣的话，我那天可以再写一个usenet的介绍，貌似国内介绍的不多；
+这个usenet是个比较旧的东西了，甚至早于Internet（因特网）的出现，早年国内好多bbs其实都是参与转信的，后来随着bbs的没落，新闻组就更没人知道了。usenet说白了就是一个多站点共同维护的超大型FTP站点。
+## **3.0day PT**
+
+这是目前来说，无法进入topsite的人最快接触到0day rls的一种方式了，“免费”,“快速”，很多参与race的站点甚至在1分钟内就从topsite站点搬运到了PT站上，所谓race（竞赛）也就是比谁从topsite的pre（预告）后最快下载到自己的PT站点，然后发种出来，这一步实现了rls（资源）从scene流落到p2p的世界。
+## **4.公网搜索**
+
+公网是速度最慢却也是下载起来最省心的方式了，当然了有很多scene资源在公网的搜索引擎是找不到的。
+
+---
+<h1 id="4">四. 部分0day PT站点简介</h1>
+
+终于到了重头戏的部分，这个才是今天要讲的。
+参与Traces Sites	的站点还是蛮多的，比如DH,RTT,AR,AL,XS,FLro,TBy,TB,TL,TS,IPT等等。
+今天选择我接触过的一些站点来介绍。
+https://www.digitalhive.org/  
+https://revolutiontt.me/  
+https://alpharatio.cc  
+https://superbits.org  
+https://www.torrentleech.org  
+https://iptorrents.com  
+https://www.xspeeds.eu/  
+https://worldofp2p.net/  
+https://www.scenetime.com  
+以下数据统计截止2019年3月7日
+### DH
+Site:	DH  
+Won:	533078  
+Second:	281308  
+Third:	167137  
+Total Raced:	1249337  
+URL:	http://digitalhive.org  
+入站方式：IRC面试，GGn,PTP,HDB等的官窑,PY大佬  
+说明：目前来看DH的pretime最短，won的次数最多，应该说是0day PT里最快的站点了，有部分PT玩家会第一时间从这里转发蓝牙原盘到HDB等站点；但是这个站点保种不太好，做种的人seeder不多，真要下载资源还是比较慢的。HR为72小时，每30天需要活跃一次。IRC、做种、登录都算，所以养活或者酱油这个站点其实就比较简单了，经常挂着IRC，或者一个种子保到天荒地老即可。
+
+### RTT
+Site:	RTT  
+Won:	266713  
+Second:	163474  
+Third:	106817  
+Total Raced:	662795  
+URL:	https://revolutiontt.me/  
+入站方式：官方申请页面，PY大佬，捐VIP送邀请码  
+说明：RTT虽然比不过DH，但是速度也很快，慢不了太多。经常会推送消息来引导大家来捐款，有一系列引导大家去推广下线的帖子。HR为72小时，每28天需要活跃一次，升级到Power User（上传100GB）也会送邀请码。
+
+
+### AR
+Site:	AR  
+Won:	205826  
+Second:	189758  
+Third:	147780  
+Total Raced:	866907  
+URL:	http://alpharatio.cc  
+入站方式：开放global邀请，PY大佬，GGn、PTP的官邀  
+说明：AR很不错，0day站点里少见的Gazelle框架，新种基本都free，pretime慢了一点点，HR也不长，挂IRC经常送积分和token，经常开邀，发global invite，相比其他0day站点还有官邀区。HR是体积<=48GB:72hours(3days) in 10days 体积>48GB:168hours(7days) in 28days，每89天登录一次帐户.上传至少3.2TB，累计1,440,000种子奖励积分可进入官邀，seedbox需要备案，才可以上传40Gb以上的种子。
+
+### SBS  
+Site:	SBS  
+Won:	56586  
+Second:	32694  
+Third:	26169  
+Total Raced:	221573  
+URL:	https://superbits.org/  
+入站方式：开放注册，PY大佬  
+说明：瑞典站点，网站语言好多不英语而是瑞典语。也是个综合站点，不仅仅有0day资源.一些热门0day资源这里的速度也很快、HR是7天内做种48小时，每89天登录一次帐户.
+
+### TL
+Site:	TL  
+Won:	54296  
+Second:	52487  
+Third:	43101  
+Total Raced:	475972  
+URL:	http://torrentleech.org  
+入站方式：时常开放注册，国内外各大PT站点官窑区，PY大佬  
+说明：TL综合出种速度和pretime最好的一家了，DH和RTT虽然pretime快，但是下载的人没几个seeder没几个人，保种也不好，下载的人也不多，而TL有20来个全站RSS的seedbox，基本上出来新种，你下载起来就是满速，保种还好。另外TL上有接入topsite的大佬，好多都是自动转载的机器人，要不然靠人工的话是没法和别人竞争速度的，而且特色就是scene的0day资源，所以上边的p2p资源并不多。TL之前没有盒子基本没活路，现在（2019年3月7日）还好有一点点的保种积分，新注册账户还送10G上传，本地倒是可以试着酱油玩玩，多保种。
+
+### IPT
+Site:	IPT  
+Won:	42486  
+Second:	77533  
+Third:	115819  
+Total Raced:	767427  
+URL:	http://iptorrents.com  
+入站方式：PU级别的大佬每个月3个邀请，捐款20刀入站  
+说明：IPT被戏称“宇宙第一大站”，他的种子和用户的确多，商业化毕竟成功，成天在首页banner鼓励大家捐款。虽然因为当年盗号盗peer的行为被众多PT所不耻，但是种子多，保种还是可以的，毕竟14天的HR，另外消除HR有2种方式，用上传抵消或者积分抵消。玩IPT还有一种玩法就是买几天vip，买个盒子，然后就可以刷几十T。IPT上鱼目混珠，所以IPT上不少资源都没法辅种cross seed，因为有人偷偷改文件名，特别恶心的行为。IPT的8G以上的资源基本都是freeleech。HR是336hours(14days) in 35days，升级到Power User,需要上传50GB比率高于1.05。每89天登录一次帐户。
+
+### XS
+Site:	XS  
+Won:	46430  
+Second:	77860  
+Third:	66180  
+Total Raced:	402019  
+URL:	http://xspeeds.eu  
+入站方式：开放注册，捐VIP送邀请码  
+说明：XSPEED有发种机器人疯狂发种，也有很多free的，之前也经常开注，近些年可能不怎么开放了，平时只有VIP可以发邀，而前几天也就是201902月底发了一些邀请给站点里的用户。seeder还不少，下载也很快。有HR，radio>1,不删号的话30天必须登录一次
+
+### WOP
+Site:	WOP  
+Won:	1  
+Second:	100  
+Third:	201  
+Total Raced:	5040  
+URL:	https://worldofp2p.net/index.php  
+入站方式：开放注册中（2019-3-8），MT,GGn,PTP等官邀  
+说明：WOP这个0day站点，界面美观，但比较冷清，很好活，不像其他站点，WOP所有用户都可以上传种子，有120hours的HR，会自动禁用60天无活动的帐户.  
+
+
+### ST
+Site:	ST  
+URL:	https://worldofp2p.net/index.php  
+入站方式：开放注册，PY大佬，捐款20刀入站  
+说明：嫌IPT 的HR时间长的，可以去他的姐们站点scenetime，ST的HR短 72hours(in 14 days)，升级为Power User（28天的会员，已上传至少10GB）即可发邀。和IPT类似有不少freeleech的，而且会提示是否解包unrar。和IPT类似，种子也有很多。另外,TorrentTing,TorrentDay,Speed.cd,SceneTime,Deildu都是IPT家的网站。
+
+
+---
+<h1 id="5"> 五.如何查询或者读懂0day trace  </h1>  
+看完了上边的介绍，或许你对0day 的trace感兴趣，就来教教大家怎么样去看懂这个trace，去查询那个rls在那个站点有了，各站点的pretime如何。
+
+这个  https://predb.pw/p2p.php  站点也有部分p2p组的trace。
+
+提供0day 站点trace信息的站点有很多，这里简单列举一些，相关资讯网址：
+> http://predb.me/  
+https://predb.org/  
+https://pre.corrupt-net.org/  
+https://predb.pw/index.php  
+http://pre.c-burns.co.uk/pre.php  
+https://trace.corrupt-net.org/live.php  
+https://www.srrdb.com/  
+https://www.xrel.to/home.html  
+http://www.roysac.com/default.html  
+https://scenenotice.org/  
+  
+下边就以DH站点旗下的一个网站
+`https://trace.corrupt-net.org/live.php` 为例，
+![image](https://images2.imgbox.com/49/bd/0Rdmm4VG_o.png)
+从图中可以看到DH最快，在TS站pre后的8.16秒就出了种，而紧跟其后的是RTT,pretime 8.91s，比DH慢了0.75s，第三是AR，13.45s,比第一名DH差了5.29s，其他的站点相比大家都会看了。
+> Mohawk.Girls.S04E03.720p.HDTV.x264-aAF
+> 
+> Release Date.....: 2019-03-06  
+> Video Resolution.: 1280x720  
+> Video Bitrate....: 2 983 Kbps  
+> Video Framerate..: 23.976  
+> Length...........: 00:21:59.968  
+> Size.............: 540 MiB  
+> 
+> Big Up all scene massive!
+
+也可以在DH或者其他站点的IRC上查询，比如在DH的IRC服务器`irc.corrupt-net.org`
+上的`#Tracer.Search`频道，输入
+```
+!trace Mohawk.Girls.S04E03.720p.HDTV.x264-aAF
+```
+可以得到
+```
+[TV-X264] Mohawk.Girls.S04E03.720p.HDTV.x264-aAF [15h 30mi 13s] [W: DH 8.16s AP] [F: RTT AR AL XS FLro TBy TB TL TS IPT]
+```
+我们也同样可以得到上边所知道的信息。
+
+当然了IRC的命令不止一个，还有很多，比如
+```
+Tracer Commands
+ !trace [<release>] [type: |group: |lang: |up:] [-pm] - Get races stats for a release.
+ !tdupe [<release>] [type: |group: |lang: |last:] - Get races stats for last 10 releases.
+ !mostraced [<release>] [type: |group: |lang: |last:] [-h|-d|-w|-m|-y|-t] [-s]  - Get most raced releases.
+ !sites - List sites.
+ !site <site> [release: |type: |group: |lang:] [-s] [-pm] - Get site stats.
+ !stats [release: |type: |site: |place: |races: |group: |lang: |last:] [-h|-d|-w|-m|-y|-t] [-a|-r|-p] [-s] [-c] [-l] [-pm] - Races stats.
+ !sitetml Site1 Site2 [SiteX...] [release: |type: |site: |place: |races: |group: |lang:] [-h|-d|-w|-m|-y] [-a|-r|-p] [-s] [-c] [-l] - Timeline stats.
+ !sitecmp Site1 Site2 [SiteX...] [release: |type: |order: |group: |lang:] [-h|-d|-w|-m|-y|-t] [-s] - Compare sites.
+ !rank [release: |type: |site: |group: |lang:] [-h|-d|-w|-m|-y|-t] [-s] - Get site ranks calculated based on a number of factors.
+ !last [x] [release: |type: |site: |group: |lang:] [-s] - Get last x races.
+ !db - Get DB info.
+ !alias - View help on creating aliases for these commands.
+ Groups
+ release: - Group by release (eg. release:One.Tree.Hill.S07|One.Tree.Hill.S08).
+ type: - Group by type (eg. type:TV-XVID|TV-X264).
+ site: - Group by site.
+ place: - Group by place.
+ races: - Group by minimum number of races.
+ group: - Group by release group.
+ lang: - Group by release language.
+ order: - Order results by speed, points, races or place.
+ last: - Trace dupe results limit (max 50).
+ up: - View the previous result (eg. up:2 previous 2nd result).
+ *You can negate by using a minus sign in front of a group. (e.g. -lang:de|fr)
+ Switches
+ -h|-hour - Limit by Hour.
+ -d|-day - Limit by Day.
+ -w|-week - Limit by Week.
+ -m|-month - Limit by Month.
+ -y|-year - Limit by Year.
+ -t|-total - Limit by Total
+ -a|-average - Limit by average speed.
+ -r|-races - Limit by total number of races.
+ -p|-points - Limit by total number of points.
+ -s|-spam - Include spam releases.
+ -c|-chart - View stats as a chart.
+ -l|-link - Get command results link only.
+ -pm - PM full race results.
+ ```
+ 
+---
+<h1 id="6">结束语</h1>
+
+到此就介绍差不多了，至于usenet新闻组的介绍，大家有兴趣的话等有空再说吧。
