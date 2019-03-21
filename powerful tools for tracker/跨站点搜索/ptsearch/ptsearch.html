@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://rhilip.github.io/PT-help/ptsearch -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="PT Search">
+    <meta name="author" content="Rhilip">
+
+    <title>PT Search</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./ptsearch_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./ptsearch_files/bootstrap-table.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        /* Move down content because we have a fixed navbar that is 50px tall */
+        body {
+            padding-top: 50px;
+            margin-bottom: 40px;
+        }
+
+        /*
+         * Top navigation
+         * Hide default border to remove 1px line.
+         */
+        .navbar-fixed-top {
+            border: 0;
+        }
+
+        /* Main content */
+        .main {
+            padding: 20px;
+            margin-top: 0;
+        }
+
+        @media (min-width: 768px) {
+            .main {
+                padding-right: 40px;
+                padding-left: 40px;
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: auto;
+            padding: 0 15px;
+        }
+
+        /* To keep data show in one line */
+        td.data-inline {
+            word-break: keep-all;
+            white-space: nowrap;
+        }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>@media print {#ghostery-purple-box {display:none !important}}</style></head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://rhilip.github.io/PT-help/ptsearch#">PT Search</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://blog.rhilip.info/archives/712/" target="_blank">About</a></li>
+                <li><a href="https://blog.rhilip.info/" target="_blank">Powered By @Rhilip</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1 main">
+            <div id="use-tampermonkey" class="alert alert-danger">
+                Please Install <a href="https://tampermonkey.net/" target="_blank">Tampermonkey</a>, And the correspond
+                userscript - <a href="https://github.com/Rhilip/PT-help/blob/master/docs/js/ptsearch.user.js" target="_blank">Pt-search</a> to <strong>USE</strong> this pages.<br>
+                If you make sure that the Tampermonkey and userscript install correctly, Please refresh the page by
+                press `F5`.
+            </div>
+            <div id="hide-without-tampermonkey" style="display: none">
+                
+                <div class="table-responsive">
+                    <div class="bootstrap-table"><div class="fixed-table-toolbar"><div class="bs-bars pull-right"><div id="toolbar" class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-cloud"></span></div>
+                        <input id="keyword" type="text" class="form-control" placeholder="Search Text">
+                    </div>
+                    <button type="button" id="advsearch" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-search"></span>Search
+                    </button>
+                </div></div></div><div class="fixed-table-container" style="padding-bottom: 0px;"><div class="fixed-table-header" style="display: none;"><table></table></div><div class="fixed-table-body"><div class="fixed-table-loading" style="top: 1px;">Loading, please wait...</div><table id="table" class="table table-hover table-striped"><thead style=""><tr><th style="text-align: center; vertical-align: middle; " data-field="site" tabindex="0"><div class="th-inner ">Site</div><div class="fht-cell"></div></th><th style="text-align: center; " data-field="name" tabindex="0"><div class="th-inner ">Name</div><div class="fht-cell"></div></th><th class="data-inline" style="text-align: center; vertical-align: middle; " data-field="pubdate" tabindex="0"><div class="th-inner sortable both desc">Publish Date</div><div class="fht-cell"></div></th><th class="data-inline" style="text-align: center; vertical-align: middle; " data-field="size" tabindex="0"><div class="th-inner sortable both">Size</div><div class="fht-cell"></div></th><th style="text-align: center; vertical-align: middle; " data-field="seeders" tabindex="0"><div class="th-inner sortable both"><span class="glyphicon glyphicon-arrow-up"></span></div><div class="fht-cell"></div></th><th style="text-align: center; vertical-align: middle; " data-field="leechers" tabindex="0"><div class="th-inner sortable both"><span class="glyphicon glyphicon-arrow-down"></span></div><div class="fht-cell"></div></th><th style="text-align: center; vertical-align: middle; " data-field="completed" tabindex="0"><div class="th-inner sortable both"><span class="glyphicon glyphicon-ok"></span></div><div class="fht-cell"></div></th></tr></thead><tbody><tr class="no-records-found"><td colspan="7">No matching records found</td></tr></tbody></table></div><div class="fixed-table-footer" style="display: none;"><table><tbody><tr></tr></tbody></table></div><div class="fixed-table-pagination" style="display: none;"><div class="pull-left pagination-detail"><span class="pagination-info">Showing 1 to 0 of 0 rows</span><span class="page-list" style="display: none;"><span class="btn-group dropup"><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="page-size">50</span> <span class="caret"></span></button><ul class="dropdown-menu" role="menu"><li><a href="javascript:void(0)">10</a></li></ul></span> rows per page</span></div><div class="pull-right pagination" style="display: none;"><ul class="pagination"><li class="page-pre"><a href="javascript:void(0)">‹</a></li><li class="page-next"><a href="javascript:void(0)">›</a></li></ul></div></div></div></div><div class="clearfix"></div>
+                </div>
+                <hr>
+                <div>
+                    <h2>Notices: </h2>
+                    <ol>
+                        <li>You must have account when searching in A Private Tracker, and logged in (Check the login
+                            status in the new tab).
+                        </li>
+                        <li>For more help, Please visit <a href="https://github.com/Rhilip/PT-help/issues/2" target="_blank">[Rhilip/PT-help/issue #2]</a>.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <!-- Button trigger modal -->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://rhilip.github.io/PT-help/ptsearch#" data-toggle="modal" data-target="#SearchSetting">Search Setting</a></li>
+                <li>&nbsp;&nbsp;</li>
+                <li><a href="https://rhilip.github.io/PT-help/ptsearch#" data-toggle="modal" data-target="#SearchLog">Search Log</a></li>
+            </ul>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="SearchSetting" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Search Setting</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="https://rhilip.github.io/PT-help/ptsearch#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Choose The Search Site
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <div id="check-site">
+                                            Chinese CERNET Private Tracker：
+                                            <div id="site-jyw"><label><input type="checkbox" id="site-check" name="BYR">BYR&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="6V" disabled="">6V&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="NPU">NPU&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="WHU">WHU&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="NWSUAF6">NWSUAF6&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="XAUAT6">XAUAT6&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="ZX">ZX&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="NYPT">NYPT&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="SJTU">SJTU&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="HIT" disabled="">HIT&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="CUGB" disabled="">CUGB&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="Antsoul" disabled="">Antsoul&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="HUDBT">HUDBT&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="TJUPT">TJUPT&nbsp;&nbsp;&nbsp;</label></div>
+                                            Other Chinese Private Tracker：
+                                            <div id="site-gw"><label><input type="checkbox" id="site-check" name="HDSKY">HDSKY&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="Hyperay">Hyperay&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="HDChina">HDChina&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="HDHome">HDHome&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="HDHome(Live)">HDHome(Live)&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="HDTime">HDTime&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="HDU">HDU&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="JoyHD">JoyHD&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="CHDBits">CHDBits&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="Ourbits">Ourbits&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="OpenCD">OpenCD&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="KeepFrds">KeepFrds&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="TCCF">TCCF&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="U2">U2&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="CMCT">CMCT&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="MTeam">MTeam&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="MTeam(Adult)">MTeam(Adult)&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="GZTown">GZTown&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="TTG(Media)">TTG(Media)&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="TTG(Gamez)">TTG(Gamez)&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="HDStreet">HDStreet&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="HDCity">HDCity&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="CCFBits">CCFBits&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="HD4FANS">HD4FANS&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="TLFBits">TLFBits&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="BTSCHOOL">BTSCHOOL&nbsp;&nbsp;&nbsp;</label><label><input type="checkbox" id="site-check" name="HDRoute">HDRoute&nbsp;&nbsp;&nbsp;</label></div>
+                                            Foreign Private Tracker：
+                                            <div id="site-wz"></div>
+                                            BitTorrent tracker:
+                                            <div id="site-bt"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="https://rhilip.github.io/PT-help/ptsearch#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Other Settings
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" class="config" id="config-log">
+                                                Full Searching Log.
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" class="config" id="config-keep-old">
+                                                Keep Old Search Data (both table and log), when searching twice.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="https://rhilip.github.io/PT-help/ptsearch#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Donation
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <p class="text-info">This project is costing my FREE time to maintain. If the
+                                            funds allow, welcome to donate by Alipay and Wechat.</p>
+                                        <div id="QR" style="display: block;" class="row">
+                                            <div id="wechat" style="display: inline-block;    padding-right: 7px;" class="col-md-6">
+                                                <img id="wechat_qr" src="./ptsearch_files/wechat.jpg" alt="WeChat Pay" class="img-responsive">
+                                                <p class="text-center">By WeChat</p></div>
+                                            <div id="alipay" style="display: inline-block;    padding-left: 7px;" class="col-md-6">
+                                                <img id="alipay_qr" src="./ptsearch_files/alipay.jpg" alt="Alipay" class="img-responsive">
+                                                <p class="text-center">By Alipay</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="save-site" data-dismiss="modal">Save changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="SearchLog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Search Log</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="search-log">
+                            <li>No Any Logs...........</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./ptsearch_files/jquery.min.js.下载"></script>
+<script src="./ptsearch_files/bootstrap.min.js.下载"></script>
+<script src="./ptsearch_files/bootstrap-table.min.js.下载"></script>
+
+<script>
+    /** Script for Main Search Result Table */
+    $('#table').bootstrapTable({
+        classes: "table table-hover table-striped",
+        striped: true,
+        sortOrder: "desc",
+        sortName: "pubdate",
+        //sortStable: true,
+        toolbar: "#toolbar",
+        toolbarAlign: "right",
+        columns: [
+            {
+                field: 'site',
+                title: 'Site',
+                align: 'center',
+                valign: 'middle'
+            }, {
+                field: 'name',
+                title: 'Name',
+                align: 'center',
+                formatter: function (value, row) {
+                    return '<a href="' + row.link + '" target="_blank" rel="noreferer nofollow">' + row.name + '</a>'
+                }
+            }, {
+                field: 'pubdate',
+                title: 'Publish Date',
+                align: 'center',
+                valign: 'middle',
+                class: 'data-inline',
+                formatter: function (data) {
+                    var unixTimestamp = new Date(data);
+                    return unixTimestamp.toLocaleString();
+                },
+                sortable: 'true'
+            }, {
+                field: 'size',
+                title: 'Size',
+                align: 'center',
+                valign: 'middle',
+                class: 'data-inline',
+                formatter: function (bytes) {
+                    var ret;
+                    var kilobyte = 1024;
+                    var megabyte = 1024 * 1024;
+                    var gigabyte = 1024 * 1024 * 1024;
+                    var terabyte = 1024 * 1024 * 1024 * 1024;
+
+                    if ((bytes >= 0) && (bytes < kilobyte)) {
+                        ret = bytes + ' B';
+                    } else if ((bytes >= kilobyte) && (bytes < megabyte)) {
+                        ret = (bytes / kilobyte).toFixed(2) + ' KB';
+                    } else if ((bytes >= megabyte) && (bytes < gigabyte)) {
+                        ret = (bytes / megabyte).toFixed(2) + ' MB';
+                    } else if ((bytes >= gigabyte) && (bytes < terabyte)) {
+                        ret = (bytes / gigabyte).toFixed(2) + ' GB';
+                    } else if (bytes >= terabyte) {
+                        ret = (bytes / terabyte).toFixed(2) + ' TB';
+                    }
+                    return ret
+                },
+                sortable: 'true'
+            }, {
+                field: 'seeders',
+                title: '<span class="glyphicon glyphicon-arrow-up"></span>',
+                align: 'center',
+                valign: 'middle',
+                sortable: 'true'
+            }, {
+                field: 'leechers',
+                title: '<span class="glyphicon glyphicon-arrow-down"></span>',
+                align: 'center',
+                valign: 'middle',
+                sortable: 'true'
+            }, {
+                field: 'completed',
+                title: '<span class="glyphicon glyphicon-ok"></span>',
+                align: 'center',
+                valign: 'middle',
+                sortable: 'true'
+            }
+        ],
+        pagination: true,
+        sidePagination: "client",
+        pageSize: 50,
+        pageList: [10, 25, 50, 100, 200, "ALL"],
+        escape: true
+    });
+</script>
+
+<script>
+    /** Script for Search Site Setting */
+    var btn_save_site = $("#save-site");
+
+    btn_save_site.click(function () {
+        // 获取用户选择搜索的网站
+        var selected_site = [];
+        $('div#check-site input:checked').each(function () {
+            selected_site.push($(this).attr('name'));
+        });
+
+        // 获取用户其他设置
+        var config = {};
+        $("input.config").each(function () {
+            config[$(this).attr("id")] = $(this).prop("checked")
+        });
+
+        // 在localStorage中存储，以便下次调用
+        localStorage.setItem('selected_name', selected_site);
+        localStorage.setItem('config', JSON.stringify(config));
+    });
+
+    function set_site(data) {
+        var type_list = ["jyw", "gw", "wz", "bt"];  // 与json文件对应的站点类型
+        for (var i = 0; i < type_list.length; i++) {
+            var type_name = type_list[i];
+            var type_data = data[type_name];
+            var type_select = "";
+
+            for (var j = 0; j < type_data.length; j++) {
+                var site = type_data[j];
+                var _disable = data.disable.indexOf(site) > -1 ? "disabled" : "";
+                type_select += "<label><input type='checkbox' id='site-check' name='" + site + "'" + _disable + ">" + site + "&nbsp;&nbsp;&nbsp;</label>"
+            }
+            $("div#site-" + type_name).html(type_select);
+        }
+
+        // 从localStorage中获取存储的搜索网站，并勾选
+        var last_selected_name_raw = localStorage.getItem('selected_name') || "BYR";
+        var last_selected_name = last_selected_name_raw.split(',');
+        for (var last_selected_var_i = 0; last_selected_var_i < last_selected_name.length; last_selected_var_i++) {
+            $('div#check-site input[name="' + last_selected_name[last_selected_var_i] + '"]').prop('checked', true);
+        }
+
+        // 从localStorage中获取存储的设置
+        var config = JSON.parse(localStorage.getItem("config"));
+        if (config) {
+            for (var c in config) {
+                $("input#" + c).prop("checked", config[c]);
+            }
+        }
+
+        btn_save_site.click();
+    }
+
+    $.get("./json/site.json", function (data) {
+        set_site(data);
+    });
+
+    /*
+    if (!localStorage.getItem("site")) {
+        $.get("./json/site.json", function (data) {
+            set_site(data);
+            localStorage.setItem("site",JSON.stringify(data));
+        });
+    } else {
+        var data = JSON.parse(localStorage.getItem("site"));
+        set_site(data);
+
+    }
+    */
+
+</script>
+
+<div class="plugin-body" style="display:none;"></div></body></html>

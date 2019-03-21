@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  - <PT>
+    <Name>HDQueen</Name>
+    <Tracker>http://hdqueen.com/announce.php?passkey=8f8036d449eb8d005be8f58c21f74ee5
+</Tracker>
+    <Source></Source>
+    <Prefix>HDQueen</Prefix>
+    <Comment></Comment>
+  </PT>
+</Config>
