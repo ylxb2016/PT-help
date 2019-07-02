@@ -327,6 +327,12 @@ $(Cue)
 
 **4.** 如果是不使用Chatzilla独立程序，而用SeaMonkey或者火狐浏览器，请安装插件后并找到快捷方式打开。支持SeaMonkey最新版，但不支持火狐浏览器最新版，火狐浏览器最多支持到56版本。
 
+此为火狐浏览器版本插件：https://addons.thunderbird.net/en-us/firefox/addon/chatzilla/?src=hp-dl-mostpopular  
+
+Version 0.9.93
+Released Nov. 8, 2016  347.2 KiB
+Works with Firefox 38.0 - 56.*, SeaMonkey 2.35 - *
+
 **5.** 步骤其实很简单，只是为了让大家了解的更多一些，才写这么详细。
 
 **感谢大家的耐心阅读，转载请注明做作者及来源，DXV5 完成于2019年7月2日.**
