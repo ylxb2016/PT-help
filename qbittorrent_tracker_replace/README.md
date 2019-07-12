@@ -146,7 +146,13 @@ qbittorrent webui api功能很强大，qbittorrent webui能实现的功能他都
 qbittorrent webui api的说明文档较为详细，具体可见：  
 https://github.com/qbittorrent/qBittorrent/wiki/Web-API-Documentation  
 需要注意的是，通过qbittorrent webui api操作前，务必先获得登录用的cookies，然后批量使用Edit trackers函数就可以了。  
-举例案例可参考rachpt大佬写的一个AutoSeed脚本里的qbittorrent设置，这里我暂时不准备展开了。  
+具体案例可参考rachpt大佬写的一个AutoSeed脚本里的qbittorrent设置，这里我暂时不准备展开了。  
 https://github.com/rachpt/AutoSeed/blob/master/qbittorrent.sh  
+
+具体工具请见本repo下的change_trackers.exe  
+感谢  @tomorrow505  
+前提——使用qbittorrent，开启webui  
+
+局限性：当前仅支持只有一个tracker地址的种子，多个的暂不支持。  
 
 综上，可以实现批量修改tracker的办法有：sed、tracker_replace.py脚本、qbtchangetracker、qbittorrent webui api。  
