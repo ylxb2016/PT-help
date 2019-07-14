@@ -16,7 +16,7 @@ Windows：`%localappdata%\qBittorrent`
 通过修改.fastresume可以实现很多功能，比如更换passkey，比如修改文件位置等等。
 我们可以用BEncode Editor和torrent-file-editor打开这个文件，如下图所示，就是tracker的地址，修改这里就可以更换你的passkey。
 
-![image](https:/images2.imgbox.com/a9/46/nsVlaG46_o.png)
+![image1](https://images2.imgbox.com/a9/46/nsVlaG46_o.png)
 
 
 PS:关于BEncode
@@ -153,6 +153,14 @@ https://github.com/rachpt/AutoSeed/blob/master/qbittorrent.sh
 感谢  @tomorrow505  
 前提——使用qbittorrent，开启webui  
 
-局限性：当前仅支持只有一个tracker地址的种子，多个的暂不支持。  
+说明：  
+1、替换tracker，多tracker也支持（精准匹配）
+
+2、增加tracker，根据tracker域名匹配（模糊匹配）
+
+3、删除tracker（精准匹配）
+
+4、删除未注册的种子，根据消息字段匹配（模糊匹配）  
+
 
 综上，可以实现批量修改tracker的办法有：sed、tracker_replace.py脚本、qbtchangetracker、qbittorrent webui api。  
