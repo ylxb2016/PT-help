@@ -44,7 +44,7 @@ PS:关于BEncode
 注意：以下所有操作前，请先备份好文件，复制出来后再进行修改，以防自己操作不慎，酿成大错。
 另外，在各个操作系统下，这些文件是一样的，你完全可以从linux下复制出来，然后在Windows下处理好了，再还原回去；或者相反的操作。
 
-## 方法一.文本编辑器——单个修
+## 方法一.文本编辑器——单个修改
 
 .fastresume也可以使用普通的记事本打开，比如我们打开25ea1b4c79dc599233333a10852746fa93d734e2.fastresume文件，如下所示，因为其包含了一些特殊的编码，所以文本文档并不能全部显示出来，给人一种乱码的感觉，这个和上图打开是一一对应的，只不过这是原始数据，没有软件替你解析各个含义了，想知道每一个的含义，请仔细阅读说明文档。我们这里只简单说出我们要修改的内容的位置和注意事项。
 很容易看到`trackersll15:http://test.com`就是我们需要修改的地方，不过注意的是我们修改的时候务必小心，不要把这里的文件结构给弄坏了，这里的每一个字符都是有特色含义和定义的，我们不可以丢掉：trackers表示trackers服务器地址，ll表示还是双层list结构，15表示http://test.com是15个字符，这里的：必不可少，这里http://test.com就是我们的tracker，一般来说PT的tracker会包含你的passkey的，这里我去掉了。
@@ -149,7 +149,7 @@ https://github.com/qbittorrent/qBittorrent/wiki/Web-API-Documentation
 具体案例可参考rachpt大佬写的一个AutoSeed脚本里的qbittorrent设置，这里我暂时不准备展开了。  
 https://github.com/rachpt/AutoSeed/blob/master/qbittorrent.sh  
 
-具体工具请见本repo下的change_trackers.exe  
+具体工具请见本repo下的edit_trackers_2.0.exe 
 感谢  @tomorrow505  
 前提——使用qbittorrent，开启webui  
 
