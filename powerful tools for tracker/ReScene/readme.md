@@ -247,15 +247,15 @@ https://github.com/ylxb2016/PT-help/blob/master/powerful%20tools%20for%20tracker
 
 参考链接：
 
-https://bitbucket.org/Gfy/pyrescene/downloads/
-https://bitbucket.org/sticki/pyautorescene
-https://www.d0z.net/archives/184
-http://rescene.wikidot.com/
-http://rescene.wikidot.com/tutorials
-http://rescene.wikidot.com/pyrescene-installation
-http://rescene.wikidot.com/faq
-http://rescene.wikidot.com/downloads
-https://gazellegames.net/wiki.php?action=article&id=374#additional%20information
+https://bitbucket.org/Gfy/pyrescene/downloads/  
+https://bitbucket.org/sticki/pyautorescene  
+https://www.d0z.net/archives/184    
+http://rescene.wikidot.com/    
+http://rescene.wikidot.com/tutorials  
+http://rescene.wikidot.com/pyrescene-installation  
+http://rescene.wikidot.com/faq  
+http://rescene.wikidot.com/downloads  
+https://gazellegames.net/wiki.php?action=article&id=374#additional%20information  
 
 ylxb2016  
 2019年7月12日  
