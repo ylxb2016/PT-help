@@ -148,7 +148,7 @@ torrent除了文件命名之外没什么需要说的，这里再说说.resume文
 4. 步骤3中的resume文本仅可用来修改只包含一个文件的种子，如若torrent文件里包含多个文件，请手动在dnd和priority下增加对应数量的整型(Integer)，赋值为0即可。
 5. 务必确保destination和name正确，已经对应的torrent和resume文件的文件名正确。
 6. 新添加进Transmission客户端torrent后，生成的resume中progress.time-checked值全为0，与实际情况不符，但不用修改，后边会自动修复的。
-7. 基于以上的原理，技术大佬们可以很容易的做出对应的批量脚本，欢迎大佬们。
+7. 基于以上的原理，技术大佬们可以很容易的做出对应的批量脚本，欢迎大佬们。(如: https://github.com/1ndeed/transmission-vskip )
 
 # 6.扩展说明
 
