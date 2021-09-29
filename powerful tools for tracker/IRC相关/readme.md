@@ -1,7 +1,7 @@
 
 Hexchat
 ----------
-**hcfishlim.dll ** -> 用来替换HexChat内的fishlim插件，原插件有bug，不支持CBC模式的fish加密
+**hcfishlim.dl** -> 用来替换HexChat内的fishlim插件，原插件有bug，不支持CBC模式的fish加密
 
 （此版本的keyx发起时仅支持CBC模式，接收时CBC和ECB模式均可）
 
