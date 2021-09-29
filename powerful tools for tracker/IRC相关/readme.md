@@ -32,6 +32,7 @@ https://wiki.znc.in/ZNC
 https://www.machunjie.com/linux/863.html
 
 ZNC-fish安装
+
     wget https://gist.github.com/v4lli/ee4edd99128e7cb518ebad548cab7a41
 
     znc-buildmod fish.cpp
