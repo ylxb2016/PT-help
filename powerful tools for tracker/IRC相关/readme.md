@@ -70,7 +70,7 @@ ZNC的`*crypt`和`*fish`存在某种意义上的冲突，`*crypt`是内置的插
 有的channel里既有ecb加密又有cbc加密，导致无法单独使用ZNC的`*crypt`或`*fish`。遇到这种情况，要么使用mIRC或者Hexchat这种既支持CBC又支持ECB的fish插件，要么就需要一定的技巧来使用ZNC的`*crypt`和`*fish`。
 
 
-# 如何支持**CBC+ECB**混合加密 #
+## 如何支持**CBC+ECB**混合加密 ##
 
 ecb的内容，一般为`+OK`的前缀；
 cbc的内容，一般为`+OK *`前缀或丢失前缀（若想手动解密，则需补回`+OK *`前缀）。
