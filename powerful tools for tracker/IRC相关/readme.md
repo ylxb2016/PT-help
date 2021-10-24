@@ -79,7 +79,7 @@ cbc的内容，一般为`+OK *`前缀或丢失前缀（若想手动解密，则�
 `*crypt` 不解密ecb的内容，只解密cbc的内容  
 `*fish` 不解密cbc的内容，只解密ecb的内容  
 
-所以，拿同一个key在`*crypt`和`*fish` 分别设置一次setkey即可
+所以，拿同一个key在`*crypt`和`*fish` 分别设置一次setkey即可  
 `/msg *fish setkey #channel 123456789`  
 `/msg *crypt setkey #channel 123456789`  
 
