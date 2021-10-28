@@ -1,13 +1,18 @@
-- [# Hexchat](#-hexchat)
-- [# mIRC](#-mirc)
-- [# ZNC](#-znc)
-  - [教程：](#教程)
-  - [ZNC-fish安装](#znc-fish安装)
-  - [关于ZNC的CBC](#关于znc的cbc)
-  - [如何支持**CBC+ECB**混合加密 ##](#如何支持cbcecb混合加密-)
-# Hexchat #
+- [1. Hexchat](#1-hexchat)
+- [2. mIRC](#2-mirc)
+- [3. ZNC](#3-znc)
+    - [3.0.1. 安装教程](#301-安装教程)
+    - [3.0.2. ZNC-fish安装](#302-znc-fish安装)
+    - [3.0.3. 关于ZNC的CBC](#303-关于znc的cbc)
+    - [3.0.4. 如何支持**CBC+ECB**混合加密](#304-如何支持cbcecb混合加密)
+  
+
+# 1. Hexchat 
+     
 ----------
-**hcfishlim.dl** -> 用来替换HexChat内的fishlim插件，原插件有bug，不支持CBC模式的fish加密
+**hcfishlim.dl** -> 用来替换HexChat内的fishlim插件，原插件（Ver 2.14.2）有bug，不支持CBC模式的fish加密。  
+
+最新版2.16.0已修复此bug。
 
 （此版本的keyx发起时仅支持CBC模式，接收时CBC和ECB模式均可）
 
@@ -23,7 +28,8 @@ for ECB mode -> `/setkey ecb:key`
 
 私聊交换key  -> `/keyx`
 
-# mIRC #
+# 2. mIRC
+
 ----------
 https://github.com/flakes/mirc_fish_10
 https://syndicode.org/fish_10/
@@ -31,15 +37,16 @@ https://syndicode.org/fish_10/
 **mirc_fish_10-setup-2020-10-10.exe** 或 **mirc_fish_10-with-ssl-2020-10-10.zip**  -> mIRC的blowfish插件
 
 
-# ZNC #
+# 3. ZNC 
+
 ----------
-## 教程： ##
-https://wiki.znc.in/ZNC
+### 3.0.1. 安装教程 
+https://wiki.znc.in/ZNC  
 https://www.machunjie.com/linux/863.html
 
-## ZNC-fish安装 ##
+### 3.0.2. ZNC-fish安装 
 
-    wget https://gist.github.com/v4lli/ee4edd99128e7cb518ebad548cab7a41
+    wget https://gist.github.com/v4lli/ee4edd99128e7cb518ebad548cab7a41/raw/c2a3c05714d8fbab8bdbcb4a2a52c7099a7efbbf/fish.cpp
 
     znc-buildmod fish.cpp
 
@@ -61,7 +68,7 @@ fish的语法 https://github.com/dctrwatson/znc-fish
 仅支持ECB模式，不支持CBC模式。
 
 
-## 关于ZNC的CBC ##
+### 3.0.3. 关于ZNC的CBC 
 
 https://github.com/znc/znc/issues/1532
 
@@ -76,7 +83,7 @@ ZNC的`*crypt`和`*fish`存在某种意义上的冲突，`*crypt`是内置的插
 有的channel里既有ecb加密又有cbc加密，导致无法单独使用ZNC的`*crypt`或`*fish`。遇到这种情况，要么使用mIRC或者Hexchat这种既支持CBC又支持ECB的fish插件，要么就需要一定的技巧来使用ZNC的`*crypt`和`*fish`。
 
 
-## 如何支持**CBC+ECB**混合加密 ##  
+### 3.0.4. 如何支持**CBC+ECB**混合加密 
 
 ecb的内容，一般为`+OK`的前缀；  
 cbc的内容，一般为`+OK *`前缀或丢失前缀（若想手动解密，则需补回`+OK *`前缀）。  
