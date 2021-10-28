@@ -1,10 +1,10 @@
 - [1. Hexchat](#1-hexchat)
 - [2. mIRC](#2-mirc)
 - [3. ZNC](#3-znc)
-    - [3.0.1. 安装教程](#301-安装教程)
-    - [3.0.2. ZNC-fish安装](#302-znc-fish安装)
-    - [3.0.3. 关于ZNC的CBC](#303-关于znc的cbc)
-    - [3.0.4. 如何支持**CBC+ECB**混合加密](#304-如何支持cbcecb混合加密)
+  - [3.1. 安装教程](#31-安装教程)
+  - [3.2. ZNC-fish安装](#32-znc-fish安装)
+  - [3.3. 关于ZNC的CBC](#33-关于znc的cbc)
+  - [3.4. 如何支持**CBC+ECB**混合加密](#34-如何支持cbcecb混合加密)
   
 
 # 1. Hexchat 
@@ -40,11 +40,11 @@ https://syndicode.org/fish_10/
 # 3. ZNC 
 
 ----------
-### 3.0.1. 安装教程 
+## 3.1. 安装教程 
 https://wiki.znc.in/ZNC  
 https://www.machunjie.com/linux/863.html
 
-### 3.0.2. ZNC-fish安装 
+## 3.2. ZNC-fish安装 
 
     wget https://gist.github.com/v4lli/ee4edd99128e7cb518ebad548cab7a41/raw/c2a3c05714d8fbab8bdbcb4a2a52c7099a7efbbf/fish.cpp
 
@@ -68,7 +68,7 @@ fish的语法 https://github.com/dctrwatson/znc-fish
 仅支持ECB模式，不支持CBC模式。
 
 
-### 3.0.3. 关于ZNC的CBC 
+## 3.3. 关于ZNC的CBC 
 
 https://github.com/znc/znc/issues/1532
 
@@ -83,7 +83,7 @@ ZNC的`*crypt`和`*fish`存在某种意义上的冲突，`*crypt`是内置的插
 有的channel里既有ecb加密又有cbc加密，导致无法单独使用ZNC的`*crypt`或`*fish`。遇到这种情况，要么使用mIRC或者Hexchat这种既支持CBC又支持ECB的fish插件，要么就需要一定的技巧来使用ZNC的`*crypt`和`*fish`。
 
 
-### 3.0.4. 如何支持**CBC+ECB**混合加密 
+## 3.4. 如何支持**CBC+ECB**混合加密 
 
 ecb的内容，一般为`+OK`的前缀；  
 cbc的内容，一般为`+OK *`前缀或丢失前缀（若想手动解密，则需补回`+OK *`前缀）。  
