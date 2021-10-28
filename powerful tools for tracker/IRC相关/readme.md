@@ -1,4 +1,10 @@
-
+- [# Hexchat](#-hexchat)
+- [# mIRC](#-mirc)
+- [# ZNC](#-znc)
+  - [教程：](#教程)
+  - [ZNC-fish安装](#znc-fish安装)
+  - [关于ZNC的CBC](#关于znc的cbc)
+  - [如何支持**CBC+ECB**混合加密 ##](#如何支持cbcecb混合加密-)
 # Hexchat #
 ----------
 **hcfishlim.dl** -> 用来替换HexChat内的fishlim插件，原插件有bug，不支持CBC模式的fish加密
